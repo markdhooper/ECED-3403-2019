@@ -3,14 +3,14 @@
 /* Last Updated:    APR-07-2019                                              */
 /* Description:     repeat after me..                                        */
 /*                  1. the value of a pointer is always an MEMORY ADDRESS.   */
-/*                  2. int variableName = 1;							     */
+/*                  2. int variableName = 1;                                 */
 /*                  3. &variableName - think "ADDRESS OF variableName"       */                         
-/*					4. int* pointerName = &variableName;					 */
-/*					5. *pointerName - think "THE VALUE STORED AT THE MEMORY  */
-/*					   ADDRESS THAT pointerName IS POINTING TO (that value   */
+/*                  4. int* pointerName = &variableName;                     */
+/*                  5. *pointerName - think "THE VALUE STORED AT THE MEMORY  */
+/*                     ADDRESS THAT pointerName IS POINTING TO (that value   */
 /*                     in this specific case is 1)".                         */
-/*					4. the address that pointerName is pointing to           */
-/*                     is the value of pointerName.	Why? SEE STEP 1. 		 */							
+/*                  6. the address that pointerName is pointing to           */
+/*                     is the value of pointerName. Why? SEE STEP 1.         */							
 
 #include <iostream>
 #include <cstdlib>
@@ -52,11 +52,11 @@ int main(void) {
 
 	/* arrays are contiguous blocks of allocated memory */
 	/* let's allocate two arrays, and point at them */
-	char a1[6] = "Hello";			   //a1 is pointing to the first of 6 bytes (\0 is at the end)
+	char a1[6] = "Hello";	           //a1 is pointing to the first of 6 bytes (\0 is at the end)
 	char a2[4] = { 'B','y','e','\0' }; //a2 is pointing to the first of 4 bytes of memory
-	char* p1 = a1;					   //p1 is pointing at the same location as a1
-	char* p2 = a2;		               //p2 is pointing at a2
-	char** pp3 = &p1;				   //pp3 is pointing at p1
+	char* p1 = a1;			   //p1 is pointing at the same location as a1
+	char* p2 = a2;                     //p2 is pointing at a2
+	char** pp3 = &p1;                  //pp3 is pointing at p1
 
 	/* let's output some strings */
 	int j;
