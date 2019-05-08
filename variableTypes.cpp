@@ -19,7 +19,7 @@
 int main(void) {
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 	/*    The following are the basic arithmetic types avaible in the c-standrd library.  */
-    /*    Variable declarations that are adjacent are equivalent.                         */
+        /*    Variable declarations that are adjacent are equivalent.                         */
 	/*    Sources:  https://en.wikipedia.org/wiki/C_data_types                            */
 	/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
