@@ -4,6 +4,9 @@ C/C++ examples to assist students enrolled in ECED 3403 - Computer Architecture 
 Please fill out the following form to indicate which topic to cover next:
 https://forms.office.com/Pages/ResponsePage.aspx?id=mRm4YH8LLUGSo-F9iunj4DpWbs_PtR5En51tBAavp0tUNEozWjlNVFhCVTZMMDJWQ0xGMUVPMzUzSC4u
 
+I'm also looking to do video tutorials if there is enough interest on my YouTube Channel:
+https://www.youtube.com/channel/UChyerhf01zG7VYn24AjJyBA
+
 Current Examples:
   - variableTypes.cpp                   
   - arraysAndPointers.cpp
