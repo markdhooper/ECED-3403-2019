@@ -2,7 +2,7 @@
 /* Program Name:    structsAndUnions.cpp                                     */
 /* Programmer:      Mark Hooper - mr876805@dal.ca                            */
 /* Last Updated:    APR-09-2019                                              */
-/* Description:     Examples of structs and unions.							 */
+/* Description:     Examples of structs and unions.			     */
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
@@ -12,25 +12,25 @@
 
 /* this is a struct, the content is contiguous in memory. */
 struct byte4s{
-	unsigned char LL;			// 1 byte
-	unsigned char LH;			// 1 byte
-	unsigned char HL;			// 1 byte
-	unsigned char HH;           // 1 byte
+	unsigned char LL;	// 1 byte
+	unsigned char LH;	// 1 byte
+	unsigned char HL;	// 1 byte
+	unsigned char HH;       // 1 byte
 };
 
 /* this is a union, the memory contents overlap in memory */
 union byte4u{
 	/* The next 4 fields occupy the same 4 bytes in memory! */
-	int i;							// 4 bytes
-	unsigned int ui;				// 4 bytes
-	unsigned short s[2];			// 2*2 bytes
-	unsigned char c[4];				// 4*1 bytes
+	int i;			// 4 bytes
+	unsigned int ui;	// 4 bytes
+	unsigned short s[2];	// 2*2 bytes
+	unsigned char c[4];	// 4*1 bytes
 };
 
 /* this struct allows you to specify a given number of bits for a field*/
 struct fields {
-	unsigned char lowNibble : 4;		// 4 bits
-	unsigned char highNibble : 4;		// 8 bits
+	unsigned char lowNibble : 4;	// 4 bits
+	unsigned char highNibble : 4;	// 4 bits
 };
 
 /* And this is just pure freakin magic */
@@ -45,7 +45,7 @@ union godMode {
 		unsigned short LH : 4;
 		unsigned short HL : 4;
 		unsigned short HH : 4;
-	}nib;							//we can call this guy nib eg: nib.LL
+	}nib;			//we can call this guy nib eg: nib.LL
 	struct bits {
 		unsigned short b0 : 1;
 		unsigned short b1 : 1;
@@ -63,12 +63,12 @@ union godMode {
 		unsigned short b13 : 1;
 		unsigned short b14 : 1;
 		unsigned short b15 : 1;
-	}b;								//same with this call him b ex b.b12
+	}b;			//same with this call him b ex b.b12
 };
 
 int main(void){
 	/* You can create a struct and initialize it */
-	struct byte4s Sa = { 0xFF, 0xFF, 0xFF, 0xFF };				  //this guy is 4 bytes full of 1's
+	struct byte4s Sa = { 0xFF, 0xFF, 0xFF, 0xFF };			   //this guy is 4 bytes full of 1's
 	struct byte4s Sb = {Sb.LL = 0, Sb.LH = 0, Sb.HL = 0, Sb.HH = 0 };  //this is all zeroes
 
 	/* unions overlap in memory so we can initialize them to some value so 
@@ -86,8 +86,8 @@ int main(void){
 	/* you should check to make sure that it's the size you think it is for example 
 	take a look at this guy: */
 	struct naughty {
-		char ImTotallyOnly1Byte;		//1
-		short ImTotallyOnly2Bytes;		//+2
+		char ImTotallyOnly1Byte;	//1
+		short ImTotallyOnly2Bytes;	//+2
 		char ITooAmTotallyOnly1Byte;	//+1 = 4
 	};
 	printf(" struct naughty has a size of %d bytes\n\n", (int)sizeof(struct naughty));
@@ -98,11 +98,11 @@ int main(void){
 	/* so let's make some more variables, with the union, we can just set the 
 	largest field, which in this case is one of the int (Ua.i, or Ua.ui)
 	because all fields share the same memory space. */
-	union byte4u Ua = { Ua.i = 0xFFFFFFFF };					//again filled with ones
+	union byte4u Ua = { Ua.i = 0xFFFFFFFF };	//again filled with ones
 
-	struct fields Sf = { 0xFF, 0x00 };						    //should be 0x0F
+	struct fields Sf = { 0xFF, 0x00 };		//should be 0x0F
 
-	union godMode omgHax = { 0xFFFF };							//ones yet again
+	union godMode omgHax = { 0xFFFF };		//ones yet again
 
 	/* so a struct is basically a poor mans class everything is public, 
 	   constructors... destructors... setters.. getters.. methods in 
