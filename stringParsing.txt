@@ -1,0 +1,10 @@
+this is a text file
+this is line 2 of the text file
+this is line 3 of the text file
+LABEL ; this is a comment
+add r2,r2 ; another comment
+
+; comment only
+org $1000
+SUBR
+add r1,r2 ; comment
