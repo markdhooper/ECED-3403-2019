@@ -11,6 +11,7 @@ Current Examples:
   - variableTypes.cpp                   
   - arraysAndPointers.cpp
   - structsAndUnions.cpp
+  - stringParsing.cpp     (use stringParsing.txt for an input file to test it out)
 
 I'm happy to help with any questions you may have. Send me an email at mr876805@dal.ca, just give me some time to respond, or better yet meet up with me in person. 
 
